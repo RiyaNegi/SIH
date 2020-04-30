@@ -1,0 +1,56 @@
+<link type="text/css" href="/css/cart.css" rel="stylesheet">
+
+<div class="container">
+    <table id="cart" class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th style="width:50%">
+                    <h3>Product</h3>
+                </th>
+                <th style="width:10%">
+                    <h3>Price</h3>
+                </th>
+                <th style="width:8%">
+                    <h3>Quantity</h3>
+                </th>
+                <th style="width:22%" class="text-center">
+                    <h3>Subtotal</h3>
+                </th>
+                <th style="width:10%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cartItems}}
+            <tr>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..."
+                                class="img-responsive" /></div>
+                        <div class="col-sm-10" style="font-size:22px;">
+                            <span class="nomargin">{{this.product_name}}</span>
+
+                        </div>
+                    </div>
+                </td>
+                <td data-th="Price" style="font-size:22px;">{{this.cost}}</td>
+                <td data-th="Quantity" style="text-align:center;font-size:22px;">
+                    {{this.quantity}}
+                </td>
+                <td data-th="Subtotal" class="text-center" style="font-size:22px;">{{this.subtotal}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+        <tfoot>
+            <tr class="visible-xs">
+                <td class="text-center" style="font-size:22px;"><strong></strong></td>
+            </tr>
+            <tr>
+                <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                <td colspan="2" class="hidden-xs"></td>
+                <td class="hidden-xs text-center"><strong>Grand Total: {{cartSubtotal}}</strong></td>
+                <td><a href="#" class="btn btn-success btn-block" style="margin-top:40px;">Checkout <i
+                            class="fa fa-angle-right"></i></a></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

@@ -1,0 +1,41 @@
+<link type="text/css" href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+
+
+<div>
+    <ul class="nav nav-tabs profile-tabs" id="profileTab">
+        <li><a href="#items" data-toggle="tab">SHOPPING ITEMS</a></li>
+        <li><a href="#people" data-toggle="tab">SHOPPERS</a></li>
+    </ul>
+    <div class="tab-content detail">
+        <div class="tab-pane in-hist row" id="items">
+            {{#each items}}
+            <div class="containerr">
+                <div style="margin-top:45px;margin-left:20px; float:left; width:80%">
+                    <h2>{{this.name}}</h2>
+                </div>
+                <div style="float:right; width:20%">
+                    <h2>Cost</h2>
+                    <h2>Rs.{{this.cost}}</h2>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="tab-pane in-hist" id="people">
+            {{#each people}}
+            <a href="/cart?personId={{this.id}}" style="text-decoration: none;">
+                <div class="containerr">
+                    <div style="margin-top:45px; margin-left:20px;float:left; width:80%">
+                        <h2>{{this.name}}</h2>
+                    </div>
+                    <div style="float:right; width:20% ">
+                        <h3>Cart Total</h3>
+                        <h2>Rs.{{this.cartSubtotal}}</h2>
+                    </div>
+                    <hr>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>

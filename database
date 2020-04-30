@@ -1,0 +1,45 @@
+create table product(
+   id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(20) NOT NULL,
+   cost INT,
+   PRIMARY KEY ( id )
+);
+
+create table people(
+   id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(20) NOT NULL,
+   PRIMARY KEY ( id )
+);
+
+create table cart(
+    person_id INT,
+    product_id INT,
+    quantity INT
+)
+INSERT INTO cart(person_id, product_id, quantity) values(1, 1, 2);
+
+
+create table shelves(
+   id INT NOT NULL AUTO_INCREMENT,
+   person_id INT,
+   PRIMARY KEY ( id )
+);
+
+
+INSERT INTO product(name,cost) values("Soda cans", "80");
+INSERT INTO product(name,cost) values("Amul milk(500ml)", "60");
+INSERT INTO product(name,cost) values("Nissan jam(250gm)", "100");
+
+INSERT INTO people(name,cart_total) values("Riya Negi", "80");
+
+
+UPDATE shelves SET person_id=(SELECT id FROM people WHERE name="Riya Negi");
+
+INSERT INTO cart(person_id,product_id,quantity) values(person_id=${userId[0].person_id}, product_id=1, quanti
+
+
+INSERT INTO cart(person_id,product_id,quantity) values(${userId[0].person_id}, 1, ${req.body.quantity}) WHERE person_id=${userId[0].person_id}`
+
+DELETE FROM people WHERE id=4;
+
+DROP TABLE people;

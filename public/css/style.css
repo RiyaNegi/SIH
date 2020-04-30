@@ -1,0 +1,111 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+    background-color:#fdfdf7;
+}
+
+.navbar {
+    background-color:#3CB371;
+    margin:0px;
+}
+
+.navbar a{
+    color:#fff !important;
+}
+
+.nav-item {
+    font-family: 'Trocchi', serif;
+    font:30px;
+    margin: 0 auto;
+    padding: 5px 5px;
+    text-align: center;
+}
+.nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Trocchi', serif;
+    margin-left:0px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+}
+
+
+/* Top & Bottom Borders Out */
+.topBotomBordersOut a:before, .topBotomBordersOut a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content:"";
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.topBotomBordersOut a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+.topBotomBordersOut a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+.topBotomBordersOut a:hover:before, .topBotomBordersOut a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+.side{
+    margin-left: 10px;
+    margin-top:8px;
+}
+.containers {
+    margin-left: auto;
+    font-size:25px;
+
+}
+
+.fontss {
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+    color: #FFF;
+    margin-left:10px;
+}
+
+
+
+.containerr {
+    display : flex;
+    margin:40px;
+    background:#fff;
+    border-radius: 10px;
+    box-shadow:10px 10px 0px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+
+
+.nav{
+    margin-left:80px;
+    margin-top:35px;
+}
+
+.profile-tabs a {
+    font-size: 25px;
+    tab-size: 8; 
+
+}
+
+.cards{
+    margin:50px;
+    margin-left:50px;
+}
+
+.row{
+    flex:50%;
+}
